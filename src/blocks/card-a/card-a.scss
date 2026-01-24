@@ -44,4 +44,15 @@
 		}
 	}
 
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__list-item {
+		font-size: 18px;
+		font-weight: 600;
+	}
+
 }
