@@ -1,0 +1,31 @@
+@use 'lib' as *;
+
+.breadcrumbs {
+	$self: &;
+	padding: fluid(64px, 48px) 0;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__list-item {
+		font-size: 18px;
+		font-weight: 700;
+		color: var(--text-muted);
+
+		&:last-child {
+			color: var(--text);
+		}
+
+		&:not(:last-child) {
+			&::after {
+				content: "/";
+				margin: 0 8px;
+			}
+		}
+	}
+
+}

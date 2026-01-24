@@ -1,0 +1,26 @@
+@use 'lib' as *;
+
+.title-underline {
+	$self: &;
+
+	font-size: fluid(32px, 24px);
+	font-weight: 700;
+	text-transform: uppercase;
+	position: relative;
+	line-height: 150%;
+	padding-bottom: 8px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 100%; left: 0;
+		width: 100%; height: 1px;
+		background: var(--text);
+	}
+
+	&_accent {
+		&::after {
+			background: var(--accent);
+		}
+	}
+}

@@ -1,0 +1,34 @@
+@use 'lib' as *;
+
+.new {
+	$self: &;
+
+	padding: fluid(64px, 48px) 0;
+
+	&__title {
+		margin-bottom: 48px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: fluid(48px, 16px);
+
+		@include media("<=xlg") {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__container {
+
+	}
+
+}

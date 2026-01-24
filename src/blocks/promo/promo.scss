@@ -1,0 +1,11 @@
+@use 'lib' as *;
+
+.promo {
+	$self: &;
+
+	&__video {
+		width: 100%;
+		object-fit: contain;
+	}
+
+}

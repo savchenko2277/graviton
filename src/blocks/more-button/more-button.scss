@@ -1,0 +1,29 @@
+@use 'lib' as *;
+
+.more-button {
+	$self: &;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 8px;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 18px;
+	transition: all var(--transition-base);
+
+	svg {
+		transition: all var(--transition-base);
+		width: 24px; height: 24px;
+		stroke: var(--accent);
+	}
+
+	&:hover {
+
+		svg {
+			stroke: var(--text);
+			transform: translateX(8px) scale(1.1);
+			
+		}
+	}
+}

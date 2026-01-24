@@ -1,0 +1,15 @@
+@use 'lib' as *;
+
+.main {
+	$self: &;
+
+	padding-top: 144px;
+
+	@include media("<=lg") {
+		padding-top: 88px;
+	}
+
+	@include media("<=xs") {
+		padding-top: 72px;
+	}
+}

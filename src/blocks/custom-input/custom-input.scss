@@ -1,0 +1,11 @@
+@use 'lib' as *;
+
+.custom-input {
+	$self: &;
+
+	padding: 12px 24px;
+	color: var(--text);
+	background: transparent;
+	border: 1px solid var(--text);
+	border-radius: var(--radius-md);
+}

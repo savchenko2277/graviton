@@ -1,0 +1,104 @@
+@use 'lib' as *;
+
+.licenses-accordeon {
+	$self: &;
+
+	padding: 24px 0;
+	display: grid;
+	grid-template-rows: max-content 0fr;
+	transition: grid-template-rows 0.3s ease;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid var(--text-muted);
+	}
+
+	&.active {
+		grid-template-rows: max-content 1fr;
+
+		#{$self}__content {
+			padding-top: 24px;
+		}
+
+		#{$self}__title {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		cursor: pointer;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 32px; height: 32px;
+			background: url("../img/icons/arrow-down.svg") no-repeat center / contain;
+			transition: transform var(--transition-base);
+		}
+	}
+
+	&__content {
+		overflow: hidden;
+		transition: all var(--transition-base);
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 24px 0;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--text-muted);
+		}
+
+		@include media("<=xs") {
+			flex-direction: column;
+			align-items: start;
+			gap: 16px;
+		}
+	}
+
+	&__link-side {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	&__link-size {
+		color: var(--text-muted);
+	}
+
+	&__link-title {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&__link-download {
+		@include flex-center;
+
+		flex-direction: row;
+		gap: 12px;
+		border-radius: var(--radius-md);
+		background: var(--btn-bg);
+		padding: 8px 16px;
+		font-weight: 700;
+		font-size: 18px;
+		color: var(--btn-text);
+
+		svg {
+			width: 32px; height: 32px;
+			fill: var(--btn-text);
+		}
+	}
+
+}

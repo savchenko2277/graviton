@@ -1,0 +1,97 @@
+@use 'lib' as *;
+
+.advantages {
+	$self: &;
+
+	padding: fluid(64px, 48px) 0;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		margin-bottom: 48px;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: fluid(48px, 16px);
+		margin-bottom: 32px;
+	}
+
+	&__card {
+		&:nth-of-type(2) {
+			grid-column: 1 / span 1;
+		}
+
+		@include media("<=md") {
+			grid-column: auto;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(48px, 16px);
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+
+		&_second {
+			#{$self}__card {
+				&:nth-of-type(1) {
+					grid-column: 2 / span 1;
+
+					@include media("<=md") {
+						grid-column: auto;
+					}
+				}
+
+				&:nth-of-type(2) {
+					grid-column: 2 / span 1;
+
+					@include media("<=md") {
+						grid-column: auto;
+					}
+				}
+			}
+
+			#{$self}__image {
+				grid-column: 1 / span 1;
+
+				@include media("<=md") {
+					grid-row: auto;
+					grid-column: auto;
+					aspect-ratio: 1 / 1;
+				}
+			}
+		}
+	}
+
+	&__image {
+		grid-column: 2 / span 1;
+		grid-row: 1 / span 2;
+		border-radius: var(--radius-sm);
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include media("<=md") {
+			grid-row: auto;
+			grid-column: auto;
+			aspect-ratio: 1 / 1;
+		}
+	}
+
+	&__more {
+		align-self: flex-end;
+	}
+
+}

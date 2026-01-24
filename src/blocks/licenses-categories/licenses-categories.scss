@@ -1,0 +1,78 @@
+@use 'lib' as *;
+
+.licenses-categories {
+	$self: &;
+
+	padding-bottom: fluid(64px, 48px);
+
+	&__container {}
+
+	&__title {
+		margin-bottom: 48px;
+	}
+
+	&__desc {
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 150%;
+		max-width: 1096px;
+		margin-bottom: 48px;
+	}
+
+	&__search {
+		margin-bottom: 48px;
+	}
+
+	&__search-title {
+		font-weight: 700;
+		font-size: 24px;
+		margin-bottom: 24px;
+	}
+
+	&__search-outer {
+		max-width: 720px;
+		display: flex;
+		flex-direction: row;
+		gap: 16px;
+	}
+
+	&__search-input {
+		flex: 1 1 auto;
+
+	}
+
+	&__search-btn {
+		height: 48px;
+		border-radius: var(--radius-md);
+		background: var(--btn-bg);
+		font-weight: 700;
+		font-size: 18px;
+		padding: 12px 24px;
+	}
+
+	&__accordeons {
+		margin-bottom: 48px;
+	}
+
+	&__help {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__help-item {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		padding: 24px 0;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--accent);
+		}
+	}
+
+	&__help-title {
+		font-weight: 700;
+		font-size: 22px;
+	}
+
+}

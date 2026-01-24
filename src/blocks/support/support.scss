@@ -1,0 +1,105 @@
+@use 'lib' as *;
+
+.support {
+	$self: &;
+
+	padding-bottom: fluid(64px, 48px);
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 48px;
+	}
+
+	&__desc {
+		font-size: 18px;
+		font-weight: 500;
+		max-width: 960px;
+		margin-bottom: 48px;
+	}
+
+	&__tabs {
+
+	}
+
+	&__navigation {
+		margin-bottom: 24px;
+	}
+
+	&__navigation-btn {
+		font-size: 22px;
+		font-weight: 700;
+		text-transform: uppercase;
+		padding: 0px 0px 16px 0px;
+	}
+
+	&__blocks {
+
+	}
+
+	&__block {
+
+	}
+
+	&__contact {
+		border-radius: var(--radius-md);
+		background: var(--card);
+		padding: fluid(32px, 24px);
+	}
+
+	&__contact-card {
+		padding: 24px 0;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--text-muted);
+		}
+	}
+
+	&__contact-title {
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	&__contact-link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		font-size: 18px;
+		font-weight: 700;
+		gap: 16px;
+
+		svg {
+			width: 32px; height: 32px;
+		}
+	}
+
+	&__contact-repair {
+		padding: 24px 0;
+		display: flex;
+		flex-direction: row;
+		gap: 24px 32px;
+		flex-wrap: wrap;
+
+		svg {
+			fill: var(--text);
+			width: 56px; height: 56px;
+			flex: 0 0 auto;
+		}
+	}
+
+	&__contact-repair-side {
+		p {
+			font-weight: 700;
+			margin-bottom: 16px;
+			font-size: fluid(20px, 16px);
+			max-width: 960px;
+			line-height: 150%;
+		}
+	}
+
+}

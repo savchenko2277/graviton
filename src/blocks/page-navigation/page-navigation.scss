@@ -1,0 +1,35 @@
+@use 'lib' as *;
+
+.page-navigation {
+	$self: &;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 12px;
+	}
+
+	&__list-item {
+		a {
+			@include flex-center;
+			border-radius: var(--radius-sm);
+			height: 48px;
+			min-width: 48px;
+			font-size: 18px;
+			font-weight: 700;
+			border: 1px solid var(--text);
+			padding: 8px 16px;
+		}
+
+		&.active {
+			a {
+				background: var(--text);
+				color: #000000;
+			}
+		}
+	}
+
+	&__next {}
+
+}

@@ -1,0 +1,47 @@
+@use 'lib' as *;
+
+.card-a {
+	$self: &;
+
+	background: var(--card);
+	border-radius: var(--radius-sm);
+	padding: fluid(32px, 24px);
+
+	&__up {
+		padding-bottom: 32px;
+		border-bottom: 1px solid var(--accent);
+		margin-bottom: 32px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: fluid(32px, 24px);
+
+		p {
+			font-size: fluid(20px, 16px);
+			line-height: 150%;
+			font-weight: 600;
+			color: var(--text-muted);
+
+			b {
+				font-weight: 600;
+				color: var(--text);
+			}
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+		font-size: fluid(24px, 20px);
+		font-weight: 500;
+
+		b {
+			font-size: fluid(48px, 32px);
+		}
+	}
+
+}

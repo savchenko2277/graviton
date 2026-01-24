@@ -1,0 +1,263 @@
+@use 'lib' as *;
+
+.header {
+	$self: &;
+
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	&__top {
+		background: var(--section);
+		position: relative;
+		z-index: 1;
+
+		@include media("<=lg") {
+			display: none;
+		}
+	}
+
+	&__top-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 0;
+		gap: 12px 32px;
+		flex-wrap: wrap;
+	}
+
+	&__top-list {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 32px;
+
+		a {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 12px;
+			font-weight: 700;
+			transition: all var(--transition-base);
+
+			&:hover {
+				color: var(--text-muted);
+				text-decoration: underline;
+
+				svg {
+					fill: var(--text-muted);
+				}
+			}
+
+			svg {
+				width: 24px;
+				height: 24px;
+				transition: fill var(--transition-base);
+				fill: #ffffff;
+			}
+		}
+	}
+
+	&__main {
+		background: var(--section-alt);
+		position: relative;
+		z-index: 1;
+	}
+
+	&__main-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		padding: 16px 0;
+	}
+
+	&__logo {
+		svg {
+			height: 50px;
+
+			@include media("<=xs") {
+				height: 32px
+			}
+		}
+	}
+
+	&__btn {
+		@include flex-center;
+
+		padding: 12px 24px;
+		border-radius: var(--radius-md);
+		flex-direction: row;
+		gap: 12px;
+		background: var(--btn-bg);
+		font-weight: 700;
+		color: var(--btn-text);
+		font-size: 18px;
+		transition: all var(--transition-base);
+
+		&:hover {
+			background: var(--btn-bg-hover);
+		}
+
+		@include media("<=xs") {
+			padding: 4px;
+
+			>span {
+				display: none;
+			}
+		}
+
+		&.active {
+			#{$self}__btn-icon {
+				svg {
+					&:nth-child(1) {
+						opacity: 0;
+					}
+
+					&:nth-child(2) {
+						opacity: 1;
+					}
+				}
+			}
+		}
+	}
+
+	&__btn-icon {
+		@include flex-center;
+		width: 32px;
+		height: 32px;
+
+		svg {
+			stroke: #ffffff;
+			position: absolute;
+			transition: opacity var(--transition-base);
+
+			&:nth-child(1) {
+				opacity: 1;
+			}
+
+			&:nth-child(2) {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__catalog {
+		position: fixed;
+		inset: 0;
+		height: 100vh;
+		width: 100vw;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: all var(--transition-base);
+		overflow-y: auto;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: auto;
+		}
+
+		&-outer {
+			display: grid;
+			grid-template-columns: 440px 1fr;
+			padding-top: 144px;
+			padding-bottom: 60px;
+			min-height: 100%;
+			height: fit-content;
+			align-items: start;
+			justify-content: start;
+			background: var(--section-alt);
+
+			@include media("<=lg") {
+				grid-template-columns: 100%;
+				padding-top: 88px;
+			}
+
+			@include media("<=xs") {
+				padding-top: 72px;
+			}
+		}
+	}
+
+	&__catalog-menu {
+		background: var(--section-alt);
+		display: flex;
+		flex-direction: column;
+		height: fit-content;
+	}
+
+	&__catalog-list {
+		padding: 4px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	&__catalog-list-item {
+		padding: 24px 32px;
+		cursor: pointer;
+		background: var(--section);
+		font-size: 18px;
+		font-weight: 700;
+
+		&.active {
+			color: var(--text-muted);
+		}
+
+		&:hover {
+			color: var(--text-muted);
+		}
+	}
+
+	&__catalog-side {
+		background: var(--section-alt);
+		padding: 4px;
+		display: flex;
+		align-items: start;
+		justify-content: start;
+	}
+
+	&__catalog-section {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	&__catalog-items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 4px;
+
+		@include media("<=sm") {
+			grid-template-columns: repeat(2, 1fr)
+		}
+	}
+
+	&__catalog-item {
+		@include flex-center;
+
+		padding: 16px;
+		flex-direction: column;
+		background: var(--section);
+
+		img {
+			width: 70%;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
+	&__catalog-item-title {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 32px;
+	}
+
+}

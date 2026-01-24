@@ -1,0 +1,73 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    <div class="breadcrumbs container">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a href="#">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a href="#">Поддержка</a></li>
+        </ul>
+    </div>
+
+    <section class="support">
+        <div class="support__container container">
+            <h1 class="support__title title-underline">Поддержка</h1>
+            <p class="support__desc">
+                Предоставляем круглосуточную поддержку. Вы можете обратиться к нам любым удобным вам способом.
+            </p>
+            <div class="support__tabs">
+                <div class="support__navigation">
+                    <button class="support__navigation-btn">Горячая линия</button>
+                </div>
+                <div class="support__blocks">
+                    <div class="support__block">
+                        <div class="support__contact">
+                            <h2 class="support__title title-underline title-underline_accent">Другие способы связи</h2>
+                            <div class="support__contact-card">
+                                <h4 class="support__contact-title">Позвонить или написать на Горячую линию</h4>
+                                <a href="#" class="support__contact-link">
+                                    <svg fill="#ffffff">
+                                        <use xlink:href="#phone"></use>
+                                    </svg>
+                                    8 (800) 500-88-86
+                                </a>
+                                <a href="#" class="support__contact-link">
+                                    <svg stroke="#ffffff" fill="none">
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                    support@graviton.ru
+                                </a>
+                            </div>
+                            <div class="support__contact-card">
+                                <h4 class="support__contact-title">Написать в Отдел продаж</h4>
+                                <a href="#" class="support__contact-link">
+                                    <svg stroke="#ffffff" fill="none">
+                                        <use xlink:href="#mail"></use>
+                                    </svg>
+                                    sale@graviton.ru
+                                </a>
+                            </div>
+                            <div class="support__contact-repair">
+                                <svg><use xlink:href="#repair"></use></svg>
+                                <div class="support__contact-repair-side">
+                                    <p>
+                                        Если вам необходим ремонт приобретенного оборудования — пожалуйста, обратитесь в
+                                        ближайший авторизованный сервисный центр «Гравитон».
+                                    </p>
+                                    <a href="#" class="more-button">
+                                        к сервисным центрам
+                                        <svg><use xlink:href="#arrow-right"></use></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include("_bottom.html")

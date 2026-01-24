@@ -1,0 +1,23 @@
+@use 'lib' as *;
+
+.pages {
+	$self: &;
+
+	padding: fluid(128px, 64px);
+
+	&__container {
+
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__list-item {
+		font-size: 18px;
+		font-weight: 700;
+	}
+
+}

@@ -1,0 +1,106 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    <div class="breadcrumbs container">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a href="#">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a href="#">Контакты</a></li>
+        </ul>
+    </div>
+
+    <section class="contacts">
+        <div class="contacts__container container">
+            <div class="contacts__office">
+                <h2 class="contacts__office-title title-underline title-underline_accent">Центральный офис «Гравитон»
+                </h2>
+                <ul class="contacts__office-list">
+                    <li class="contacts__office-list-item">
+                        <p class="contacts__office-item">
+                            <svg fill="#ffffff">
+                                <use xlink:href="#location"></use>
+                            </svg>
+                            Москва, Киевская улица, 7к2
+                        </p>
+                    </li>
+                    <li class="contacts__office-list-item">
+                        <a class="contacts__office-item" href="#">
+                            <svg fill="#ffffff">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            8 800 555-35-35
+                        </a>
+                    </li>
+                    <li class="contacts__office-list-item">
+                        <a class="contacts__office-item" href="#">
+                            <svg fill="none" stroke="#ffffff">
+                                <use xlink:href="#mail"></use>
+                            </svg>
+                            sale@graviton.ru
+                        </a>
+                    </li>
+                </ul>
+                <a href="#" class="contacts__office-download">
+                    Посмотреть и скачать схему проезда
+                    <svg>
+                        <use xlink:href="#download"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="contacts__map"></div>
+            <div class="contacts__details">
+                <a href="#" class="contacts__details-download">
+                    Скачать реквизиты
+                    <svg>
+                        <use xlink:href="#download"></use>
+                    </svg>
+                </a>
+                <table class="contacts__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">наименование</th>
+                            <td scope="col">Общество c ограниченной ответственностью «Революционные технологии»</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Полное наименование</th>
+                            <td>Общество c ограниченной ответственностью «Революционные технологии»</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Краткое наименование</th>
+                            <td>ООО «Ревотех»</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Полное наименование</th>
+                            <td>Общество c ограниченной ответственностью «Революционные технологии»</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Краткое наименование</th>
+                            <td>ООО «Ревотех»</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="contacts__pressa">
+                <h2 class="contacts__pressa-title title-underline title-underline_accent">По вопросам взаимодействия со СМИ пишите нам:</h2>
+                <a href="#" class="contacts__pressa-contact">
+                    <svg>
+                        <use xlink:href="#mail"></use>
+                    </svg>
+                    pressa@graviton.ru
+                </a>
+                <h2 class="contacts__pressa-title title-underline title-underline">Материалы о компании</h2>
+                <a href="#" class="more-button">
+                    pressa@graviton.ru
+                    <svg>
+                        <use xlink:href="#arrow-right"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+@@include("_bottom.html")

@@ -1,0 +1,63 @@
+@use 'lib' as *;
+
+.card-c {
+	$self: &;
+
+	background: var(--card);
+	border-radius: var(--radius-md);
+	padding: 24px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+
+	&__image {
+		@include flex-center;
+
+		border-radius: var(--radius-md);
+		background: var(--section-alt);
+		aspect-ratio: 1 / 1;
+
+		img {
+			object-fit: contain;
+			width: 60%;
+			max-height: 60%;
+		}
+	}
+
+	&__title {
+		font-size: fluid(24px, 22px);
+		font-weight: 700;
+		line-height: 150%;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+		padding-left: 24px;
+	}
+
+	&__list-item {
+		font-weight: 600;
+		line-height: 150%;
+		list-style-type: disc;
+	}
+
+	&__link {
+		@include flex-center;
+		
+		font-weight: 700;
+		border: 1px solid var(--text-muted);
+		color: var(--text-muted);
+		border-radius: var(--radius-md);
+		padding: 16px 32px;
+		transition: all var(--transition-base);
+
+		&:hover {
+			border-color: var(--text);
+			color: var(--text);
+		}
+	}
+
+}

@@ -1,0 +1,49 @@
+@use 'lib' as *;
+
+.licenses {
+	$self: &;
+
+	padding: fluid(64px, 48px) 0;
+
+	&__container {
+
+	}
+
+	&__title {
+		margin-bottom: 48px;
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(48px, 16px);
+		
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__card {
+
+	}
+
+	&__card-images {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: fluid(24px, 8px) fluid(48px, 8px);
+	}
+
+	&__card-image {
+		@include flex-center;
+
+		padding: 20px;
+		border-radius: var(--radius-lg);
+		background: var(--section-alt);
+		width: 100%;
+
+		img {
+			width: 70%;
+		}
+	}
+
+}
