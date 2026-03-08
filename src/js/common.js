@@ -1,6 +1,7 @@
 import { throttle } from "./libs/utils";
 import "./polyfills.js";
 import "./blocks.js";
+import 'simplebar';
 
 // Функции
 

@@ -5,6 +5,55 @@
 
 	padding: fluid(64px, 48px) 0;
 
+	&_filters {
+		#{$self}__items {
+			gap: fluid(24px, 16px);
+			grid-template-columns: repeat(2, 1fr);
+
+			@include media("<=md") {
+				grid-template-columns: 100%;
+			}
+		}
+
+		#{$self}__title {
+			padding-bottom: 0;
+			width: fit-content;
+			margin-bottom: 0;
+
+			&::after {
+				content: none;
+			}
+		}
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		border-bottom: 1px solid var(--text-muted);
+		margin-bottom: 32px;
+		padding-bottom: 24px;
+
+		@include media("<=md") {
+			gap: 16px;
+			align-items: start;
+			flex-direction: column;
+		}
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: fluid(460px, 280px) 1fr;
+		gap: fluid(48px, 24px);
+		position: relative;
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+		}
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -47,6 +96,23 @@
 
 	&__more {
 		align-self: flex-end;
+	}
+
+	&__btn-open {
+		@include flex-center;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+		font-weight: 700;
+		padding: 12px 24px;
+		border: 1px solid var(--text-muted);
+		border-radius: 8px;
+
+		@include media(">md") {
+			display: none;
+		}
 	}
 
 }

@@ -1,0 +1,246 @@
+@@include("_head.html", {"id":"home"})
+@@include("_header.html")
+
+<main class="main">
+
+    <div class="breadcrumbs container">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a href="#">Главная</a></li>
+            <li class="breadcrumbs__list-item"><a href="#">Партнерам</a></li>
+        </ul>
+    </div>
+
+    <section class="categories categories_filters">
+        <div class="categories__container container">
+            <div class="categories__top">
+                <h2 class="categories__title title-underline">Каталог продуктов</h2>
+                <div class="categories__sort filters__sort">
+                    <p class="filters__sort-item active">Сначала популярные</p>
+                    <p class="filters__sort-item">Сначала сначала дешевые</p>
+                    <p class="filters__sort-item">Еще какой-то на всякий случай</p>
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8.78888 14.3223H7.22052V3.66093C7.22052 3.57242 7.14623 3.5 7.05543 3.5H5.89979C5.80899 3.5 5.7347 3.57242 5.7347 3.66093V14.3223H4.16633C4.02807 14.3223 3.94965 14.4792 4.03632 14.5838L6.3476 17.4383C6.36304 17.4575 6.38277 17.473 6.4053 17.4837C6.42782 17.4944 6.45255 17.5 6.47761 17.5C6.50266 17.5 6.52739 17.4944 6.54992 17.4837C6.57244 17.473 6.59217 17.4575 6.60762 17.4383L8.91889 14.5838C9.0035 14.4792 8.92715 14.3223 8.78888 14.3223Z"
+                            fill="#F9003B"></path>
+                        <path
+                            d="M13.6545 3.56175C13.639 3.54251 13.6193 3.52696 13.5968 3.51626C13.5743 3.50556 13.5495 3.5 13.5245 3.5C13.4994 3.5 13.4747 3.50556 13.4522 3.51626C13.4296 3.52696 13.4099 3.54251 13.3945 3.56175L11.0832 6.41618C10.9965 6.52279 11.0749 6.67769 11.2132 6.67769H12.7816V17.3391C12.7816 17.4276 12.8559 17.5 12.9467 17.5H14.1023C14.1931 17.5 14.2674 17.4276 14.2674 17.3391V6.67769H15.8358C15.974 6.67769 16.0524 6.52078 15.9658 6.41618L13.6545 3.56175Z"
+                            fill="#B0B0B1"></path>
+                    </svg>
+                </div>
+                <button data-filters-open class="categories__btn-open">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M11.3333 18H8.66667C8.31305 18 7.97391 17.8595 7.72386 17.6095C7.47381 17.3594 7.33333 17.0203 7.33333 16.6667V11.6067L2.39333 6.66667C2.14294 6.41777 2.00149 6.07972 2 5.72667V3.33333C2 2.97971 2.14048 2.64057 2.39052 2.39052C2.64057 2.14048 2.97971 2 3.33333 2H16.6667C17.0203 2 17.3594 2.14048 17.6095 2.39052C17.8595 2.64057 18 2.97971 18 3.33333V5.72667C17.9985 6.07972 17.8571 6.41777 17.6067 6.66667L12.6667 11.6067V16.6667C12.6667 17.0203 12.5262 17.3594 12.2761 17.6095C12.0261 17.8595 11.687 18 11.3333 18ZM3.33333 3.33333V5.72667L8.66667 11.06V16.6667H11.3333V11.06L16.6667 5.72667V3.33333H3.33333Z"
+                            fill="CurrentColor">
+                        </path>
+                    </svg>
+                    Фильтры
+                </button>
+            </div>
+            <div class="categories__body">
+                <div data-filters-js class="categories__filters filters">
+                    <button class="filters__close">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 5L15 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+                            <path d="M15 5L5 15" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></path>
+                        </svg>
+                    </button>
+                    <div class="filters__container">
+                        <div class="filters__items">
+                            <div class="filters__item active">
+                                <div class="filters__item-top">
+                                    <p>Диагональ монитора</p>
+                                </div>
+                                <div data-simplebar class="filters__item-content">
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        16.9 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        16.9 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing.
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filters__item">
+                                <div class="filters__item-top">
+                                    <p>Диагональ монитора</p>
+                                </div>
+                                <div data-simplebar class="filters__item-content">
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        16.9 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filters__item">
+                                <div class="filters__item-top">
+                                    <p>Диагональ монитора</p>
+                                </div>
+                                <div data-simplebar class="filters__item-content">
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        16.9 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filters__item">
+                                <div class="filters__item-top">
+                                    <p>Диагональ монитора</p>
+                                </div>
+                                <div data-simplebar class="filters__item-content">
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        16.9 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="filters__item">
+                                <div class="filters__item-top">
+                                    <p>Диагональ монитора</p>
+                                </div>
+                                <div data-simplebar class="filters__item-content">
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        16.9 дюймов
+                                    </label>
+                                    <label class="filters__label">
+                                        <input type="checkbox">
+                                        11.11 дюймов
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filters__buttons">
+                            <button class="filters__btn filters__submit">Применить</button>
+                            <button class="filters__btn filters__reset">Сбросить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="categories__items">
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                    <a href="#" class="categories__item">
+                        <img src="./img/new/pc.webp" alt="" class="categories__item-image">
+                        <h4 class="categories__item-title">Lorem, ipsum.</h4>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="categories__more more-button">
+                подробнее
+                <svg>
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+@@include("_bottom.html")
